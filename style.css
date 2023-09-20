@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;900&display=swap");
-
+:root {
+  --bg--color: #2f363e;
+}
 * {
   margin: 0;
   padding: 0;
@@ -11,10 +13,15 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-color: #2f363e;
+  background-color: var(--bg--color);
 }
 .container {
   position: relative;
 }
 .clock {
+  position: relative;
+  width: 450px;
+  height: 450px;
+  background-color: var(--bg--color);
+  border-radius: 50%;
 }
