@@ -18,15 +18,14 @@ body {
 .container {
   position: relative;
   background-color: var(--bg--color);
-  min-height: 500px;
+  /* min-height: 500px; */
   border-radius: 20px;
   border-top-left-radius: 225px;
   border-top-right-radius: 225px;
-  box-shadow: 25px 25px 75px rgba(0, 0, 0, 0.75) 10px 10px 70px
-    rgba(0, 0, 0, 0.25);
-  inset: 5px 5px 10px rgba(0, 0, 0, 0.5);
-  inset: 5px 5px 20px rgba(0, 0, 0, 0.2);
-  inset: -5px -5px 15px rgba(0, 0, 0, 0.75);
+  box-shadow: 25px 25px 75px rgba(0, 0, 0, 0.75),
+    10px 10px 70px rgba(0, 0, 0, 0.25), inset 5px 5px 10px rgba(0, 0, 0, 0.5),
+    inset 5px 5px 20px rgba(0, 0, 0, 0.2),
+    inset -5px -5px 15px rgba(0, 0, 0, 0.75);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -37,10 +36,9 @@ body {
   height: 450px;
   background-color: var(--bg--color);
   border-radius: 50%;
-  box-shadow: 10px 50px 70px rgba(0, 0, 0, 0.25);
-  inset: 5px 5px 10px rgba(0, 0, 0, 0.5);
-  inset: 5px 5px 20px rgba(0, 0, 0, 0.2);
-  inset: -5px -5px 15px rgba(0, 0, 0, 0.75);
+  box-shadow: 10px 50px 70px rgba(0, 0, 0, 0.25),
+    inset 5px 5px 10px rgba(0, 0, 0, 0.5), inset 5px 5px 20px rgba(0, 0, 0, 0.2),
+    inset -5px -5px 15px rgba(0, 0, 0, 0.75);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -48,9 +46,24 @@ body {
 }
 .clock::before {
   content: "";
+  position: absolute;
   width: 8px;
   height: 8px;
   background-color: var(--bg--color);
   border: 3px solid #fff;
   border-radius: 50%;
+}
+.clock span {
+  position: absolute;
+  inset: 20px;
+  color: white;
+  text-align: center;
+  transform: rotate(calc(30deg * var(--i)));
+}
+.clock span b {
+  font-size: 2em;
+  opacity: 0.25;
+  font-weight: 600;
+  display: inline-block;
+  transform: rotate(calc(-30deg * var(--i)));
 }
